@@ -2,14 +2,16 @@ import numpy as np
 import math
 import matplotlib.pyplot as plt
 
+print(math.pi)
+
 def makeSignal(t,f,delta,am):
   return am*math.sin(2*math.pi*f*t + delta)
 
 def rightShifting(x,ts):
-    return x+ts
+    return x+ts;
 
 def leftShifting(x,ts):
-    return x-ts
+    return x-ts;
 
 x = np.linspace(0,0.01,120)
 am_t = input("Enter amplitude:")
@@ -19,7 +21,7 @@ freq = float(freq_t)
 phase_t = input("Enter Phase in degree:")
 phase = float(phase_t)
 phase = phase*(math.pi/180.0)
-# print(phase)
+print(phase)
 y = []
 for i in x:
   y.append(makeSignal(i,freq,phase,am))
